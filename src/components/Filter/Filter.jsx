@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import css from './Filter.module.css';
 
 export function Filter(props) {
   return (
-    <div>
+    <div className={css.filter}>
       <label>
         Find contacts by name <br />
         <input

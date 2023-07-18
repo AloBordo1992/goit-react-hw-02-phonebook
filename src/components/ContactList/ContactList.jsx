@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { ContactItem } from 'components/ContactItem/ContactItem';
 import PropTypes from 'prop-types';
+import css from './ContactList.module.css';
 
 export class ContactList extends Component {
   static propTypes = {
@@ -11,7 +12,7 @@ export class ContactList extends Component {
 
   render() {
     return (
-      <ul>
+      <ul className={css.contactList}>
         {this.props.contacts.map(contact => {
           return (
             <ContactItem

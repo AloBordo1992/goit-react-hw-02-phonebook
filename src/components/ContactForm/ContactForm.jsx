@@ -1,6 +1,6 @@
-import { Component } from "react";
+import { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import css from './ContactForm.module.css';
 
 export class ContactForm extends Component {
   static propTypes = {
@@ -33,7 +33,6 @@ export class ContactForm extends Component {
   };
 
   onNoIdenticalContact() {
-    
     this.props.onFormSubmit(this.state);
     this.reset();
   }
@@ -44,7 +43,7 @@ export class ContactForm extends Component {
 
   render() {
     return (
-      <form  onSubmit={this.handleFormSubmit}>
+      <form className={css.contactForm} onSubmit={this.handleFormSubmit}>
         <label>
           Name <br />
           <input
